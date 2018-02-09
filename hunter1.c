@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(void) {
-	int a[10],i,n,j,count=0,temp;
+	int a[10],i,n,j,count=0,temp,b[10],k=0;
 	scanf("%d",&n);
 	for(i=1;i<=n;i++)
 	scanf("%d",&a[i]);
@@ -11,19 +11,24 @@ int main(void) {
 	++count;
 	if(count>0)
 	{
-	printf("%d\n",a[i]);
-	/*for(i=1;i<=i;i++)
-	for(j=i+1;j<=i;j++)
+	k++;
+	b[k]=a[i];
+    printf("%d\n",b[k]);
+    }}
+    for(i=1;i<=k;i++)
+	{for(j=i+1;j<=k;j++)
 	{
-	if(a[i]>a[j])
+	if(b[i]>b[j])
 	{
-	temp=a[i];
-	a[i]=a[j];
-	a[j]=temp;
+	temp=b[i];
+	b[i]=b[j];
+	b[j]=temp;
 	}
-	}
-	printf("%d",a[i]);*/
-	}
-	}
+	}}
+	for(i=1;i<=k;i++)
+	{
+	printf("%d\n",b[i]);}
+    if(count==0)
+    printf("unique");
 return 0;
 }
